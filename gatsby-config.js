@@ -3,6 +3,10 @@ module.exports = {
     siteUrl: "https://xavier-pisco.github.io/",
     title: "Xavier Pisco",
   },
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+  ],
   pathPrefix: "/",
 };
