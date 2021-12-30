@@ -4,9 +4,10 @@ module.exports = {
     title: "Xavier Pisco",
   },
   plugins: [
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    "gatsby-plugin-sass",
   ],
   pathPrefix: "/",
 };
