@@ -1,6 +1,6 @@
 {
   "name": "xavier-pisco",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
   "description": "Xavier Pisco",
   "author": "xavier",
@@ -16,7 +16,9 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master"
   },
   "dependencies": {
-    "bulma": "^0.9.3",
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.8.7",
     "gatsby": "^4.4.0",
     "gatsby-plugin-image": "^2.4.0",
     "gatsby-plugin-sass": "^5.4.0",
@@ -24,8 +26,7 @@
     "gatsby-source-filesystem": "^4.4.0",
     "gatsby-transformer-sharp": "^4.4.0",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "sass": "^1.45.1"
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "eslint-config-react-app": "^7.0.0",

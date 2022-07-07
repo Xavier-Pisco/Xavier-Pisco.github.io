@@ -1,3 +1,4 @@
+import { Container } from '@mui/material'
 import * as React from 'react'
 import Navbar from './Navbar'
 
@@ -6,9 +7,10 @@ const Layout = ({ pageTitle, children }) => {
         <div>
             <title>{pageTitle}</title>
             <main>
-            <Navbar></Navbar>
-                <h1>{pageTitle}</h1>
-                {children}
+                <Container>
+                    <Navbar></Navbar>
+                    {children}
+                </Container>
             </main>
         </div>
     )
