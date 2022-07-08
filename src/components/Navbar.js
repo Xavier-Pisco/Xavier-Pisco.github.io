@@ -4,7 +4,7 @@ import { Button, Grid } from '@mui/material'
 
 const Navbar = () => {
     return (
-        <Grid container justifyContent="space-between" >
+        <Grid container margin={2} marginBottom={5} justifyContent="space-between" >
             <Grid item>
                 <Logo />
             </Grid>

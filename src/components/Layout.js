@@ -1,17 +1,29 @@
-import { Container } from '@mui/material'
+import { Container, Stack } from '@mui/material'
 import * as React from 'react'
 import Navbar from './Navbar'
+import Footer from '../components/Footer'
 
 const Layout = ({ pageTitle, children }) => {
     return (
-        <div>
+        <div style={{
+            height: '100%',
+            display: 'flex',
+            flexDirection: "column"
+        }}>
             <title>{pageTitle}</title>
-            <main>
-                <Container>
+            <Container style={{
+                flexGrow: 1,
+                height: "100%"
+            }}>
+                <Stack alignItems="center" justifyContent="space-between" direction="column" style={{
+                    height: "100%"
+                }}>
                     <Navbar></Navbar>
-                    {children}
-                </Container>
-            </main>
+                    <Stack spacing={2} alignItems="center">{children}</Stack>
+                    <Footer />
+                </Stack>
+            </Container>
+
         </div>
     )
 }
