@@ -6,10 +6,10 @@ import * as React from 'react'
 
 const Footer = () => {
     return (
-        <Grid container justifyContent="center">
-            <Grid item><IconButton href="https://github.com/Xavier-Pisco/" target="_blank" color='primary'><GitHubIcon /></IconButton></Grid>
-            <Grid item><IconButton href="https://www.linkedin.com/in/xavier-pisco/" target="_blank" color='primary'><LinkedInIcon/></IconButton></Grid>
-            <Grid item><IconButton href="mailto:x.pisco@gmail.com" target="_blank" color='primary'><EmailOutlinedIcon/></IconButton></Grid>
+        <Grid container justifyContent="center" style={{paddingBottom:"1rem"}}>
+            <Grid item><IconButton rel="noreferrer" href="https://github.com/Xavier-Pisco/" target="_blank" color='primary'><GitHubIcon /></IconButton></Grid>
+            <Grid item><IconButton rel="noreferrer" href="https://www.linkedin.com/in/xavier-pisco/" target="_blank" color='primary'><LinkedInIcon/></IconButton></Grid>
+            <Grid item><IconButton rel="noreferrer" href="mailto:x.pisco@gmail.com" target="_blank" color='primary'><EmailOutlinedIcon/></IconButton></Grid>
         </Grid>
     );
 }

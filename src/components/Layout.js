@@ -10,16 +10,25 @@ const Layout = ({ pageTitle, children }) => {
             display: 'flex',
             flexDirection: "column"
         }}>
-            <title>{pageTitle}</title>
+            <title>{"Xavier Pisco | " + pageTitle}</title>
             <Container style={{
                 flexGrow: 1,
                 height: "100%"
             }}>
-                <Stack alignItems="center" justifyContent="space-between" direction="column" style={{
-                    height: "100%"
-                }}>
+                <Stack
+                    alignItems="center"
+                    justifyContent="space-between"
+                    direction="column"
+                    style={{ height: "100%" }}>
                     <Navbar></Navbar>
-                    <Stack spacing={2} alignItems="center">{children}</Stack>
+                    <Stack
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={7}
+                        style={{ height: "100%" }}>
+                        {children}
+                    </Stack>
                     <Footer />
                 </Stack>
             </Container>

@@ -1,0 +1,8 @@
+#navbar a {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.MuiLink-root {
+    margin: 0.5rem!important;
+}
