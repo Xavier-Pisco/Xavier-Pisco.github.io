@@ -1,0 +1,17 @@
+{
+  "title": "Confnect",
+  "github": "https://github.com/Xavier-Pisco/Confnect",
+  "image": "./confnect.png",
+  "initialDate": "Oct. 2020",
+  "endDate": "Dec. 2020",
+  "group": 5,
+  "tags": ["Mobile", "Application"],
+  "summary": "Discussion forum to be used in conferences",
+  "topics": [
+    "Mobile app developed using Scrum framework for better teamwork",
+    "The app was one of multiple apps for a conference at FEUP",
+    "App was developed in <a href=\"https://flutter.dev/\" target=\"_blank\">Flutter</a> and BDD tests with <a href=\"https://cucumber.io/docs/gherkin/\" target=\"_blank\">Gherkin</a>"
+  ],
+  "technologies": ["Flutter", "Dart", "Scrum", "Gherkin"],
+	"position": 2
+}

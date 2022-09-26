@@ -1,0 +1,17 @@
+{
+  "title": "Breakout",
+  "github": "https://github.com/Xavier-Pisco/Breakout",
+  "image": "./breakout.png",
+  "initialDate": "Apr. 2020",
+  "endDate": "May. 2020",
+  "group": 2,
+  "tags": ["Terminal", "Application"],
+  "summary": "Atari game built as a text-based Java game",
+  "topics": [
+    "Breakout game developed in the terminal using the <a href=\"https://github.com/mabe02/lanterna\" target=\"_blank\">Lanterna</a> library",
+    "Project developed to learn Object Oriented Programming using the Model-View-Controller pattern",
+    "High test coverage using <a href=\"https://junit.org/junit5/\"  target=\"_blank\">JUnit</a>, <a href=\"https://site.mockito.org/\" target=\"_blank\">Mockito</a> and <a href=\"https://jqwik.net/\" target=\"_blank\">jqwik</a>"
+  ],
+  "technologies": ["Java", "Gradle", "JUnit", "Lanterna"],
+	"position": 1
+}

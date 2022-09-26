@@ -1,14 +1,22 @@
-html, body, #___gatsby, #gatsby-focus-wrapper  {
-    height: 100%;
-    margin: 0;
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+  margin: 0;
 }
 
 .MuiTypography-h1 {
-    font-size: 3rem!important;
-    font-weight: 600!important;
+  font-size: 3rem !important;
+  font-weight: 600 !important;
 }
 
 .MuiTypography-h2 {
-    font-size: 1.5rem!important;
-    font-weight: 300!important;
+  font-size: 1.5rem !important;
+  font-weight: 400 !important;
+}
+
+.MuiTypography-h3 {
+  font-size: 1.2rem !important;
+  font-weight: 400 !important;
 }
