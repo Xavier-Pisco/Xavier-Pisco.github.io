@@ -1,14 +1,16 @@
 {
-  "title": "A Scrum Book",
-  "github": "https://github.com/softeng-feup/ds-meic5",
-  "initialDate": "Oct. 2021",
-  "finalDate": "Mar.2022",
-  "group": "DS@FEUP",
-  "tags": ["Scrum"],
-  "summary": "Efficient and fast navigation through \"A scrum book\"",
-  "topics": [
-    "This web app was developed as a way to read the most important parts of \"A scrum book\" in a easy and fast way",
-    "I was one of the Product Owners for the project and was responsible to have meetings with the client and communicate the information to a team of 27 people, mostly via user stories."
-  ],
-  "techonologies": ["Scrum", "LeSS", "Agile", "React", "JavaScript"]
+	"title": "A Scrum Book",
+	"github": "https://github.com/softeng-feup/ds-meic5",
+	"image": "./scrumbook.png",
+	"initialDate": "Oct. 2021",
+	"endDate": "Mar. 2022",
+	"group": 27,
+	"tags": ["Scrum"],
+	"summary": "Efficient and fast navigation through \"A scrum book\"",
+	"topics": [
+		"This web app was developed as a way to read the most important parts of \"A scrum book\" in a easy and fast way",
+		"I was one of the Product Owners for the project and was responsible to have meetings with the client and communicate the information to a team of 27 people, mostly via user stories."
+	],
+	"technologies": ["Scrum", "LeSS", "Agile", "React", "JavaScript"],
+	"position": 4
 }

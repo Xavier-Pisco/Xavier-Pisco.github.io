@@ -1,24 +1,26 @@
 {
-  "title": "LiNK.ME",
-  "github": "https://github.com/Xavier-Pisco/LiNK.ME",
-  "initialDate": "Feb. 2021",
-  "endDate": "Jun. 2021",
-  "group": "LBAW@FEUP",
-  "tags": ["Frontend", "Backend"],
-  "summary": "Social app similar to Twitter and Facebook",
-  "topics": [
-    "Website for a social media that is close to a mixture between Facebook and Twitter",
-    "Development focused on methodologies such as: <strong>user stories</strong>, <strong>requirements</strong>, <strong>wireframes</strong>, etc.",
-    "Worked on a <strong>Restful API</strong> that connects the <strong>PHP</strong> backend to the frontend"
-  ],
-  "technologies": [
-    "PHP",
-    "Laravel",
-    "PostgreSQL",
-    "Bootstrap",
-    "Docker",
-    "HTML",
-    "CSS",
-    "Javascript"
-  ]
+	"title": "LiNK.ME",
+	"github": "https://github.com/Xavier-Pisco/LiNK.ME",
+	"image": "./linkme.png",
+	"initialDate": "Feb. 2021",
+	"endDate": "Jun. 2021",
+	"group": 4,
+	"tags": ["Frontend", "Backend"],
+	"summary": "Social app similar to Twitter and Facebook",
+	"topics": [
+		"Website for a social media that is close to a mixture between Facebook and Twitter, which used <a href=\"https://www.postgresql.org/\" target=\"_blank\">PostgreSQL</a> as the server database.",
+		"Development focused on methodologies such as: user stories, requirements, wireframes, etc.",
+		"Worked on a Restful API that connects the <a href=\"https://laravel.com/\" target=\"_blank\">Laravel</a> backend to the HTML, CSS and Javascript frontend."
+	],
+	"technologies": [
+		"PHP",
+		"Laravel",
+		"PostgreSQL",
+		"Bootstrap",
+		"Docker",
+		"HTML",
+		"CSS",
+		"Javascript"
+	],
+	"position": 3
 }
