@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Project from '../components/Project.astro';
+const projects = await getCollection('projects');
+---
+
+<Layout title="Projects">
+  <main
+    slot="main-content"
+    class="h-fit min-h-full flex flex-col gap-8 items-center"
+  >
+    <h1>Projects</h1>
+    <ul class="w-full h-fit min-h-full flex flex-col gap-8">
+      {
+        projects.map((project) => (
+          <li class="w-full h-fit min-h-full">
+            <Project project={project} />
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>

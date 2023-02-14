@@ -1,0 +1,61 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Github from '../icons/github.astro';
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+const { project } = Astro.props;
+---
+
+<div class="flex flex-row shadow-lg w-full h-fit min-h-full">
+  <img
+    src={project.data.image}
+    class="h-96 w-96"
+    height="400px"
+    width="400px"
+  />
+  <div class="flex flex-col gap-4 w-full p-4 h-fit min-h-full">
+    <div class="flex flex-row place-content-between w-full">
+      <div class="flex flex-col gap-2">
+        <h2>
+          <span class="text-blue">{project.data.title}</span> - {
+            project.data.subtitle
+          }
+        </h2>
+        <div class="flex flex-row gap-4">
+          {
+            project.data.link && (
+              <a href={project.data.link} target="_blank">
+                Try it!
+              </a>
+            )
+          }
+          <Github link={project.data.github} color="gray" />
+        </div>
+      </div>
+      <div class="flex flex-col gap-2 text-right text-gray">
+        <p>{project.data.startDate}-{project.data.endDate}</p>
+        <p>{project.data.group}</p>
+      </div>
+    </div>
+    <ul
+      class="flex flex-col gap-8 p-4 list-disc marker:text-blue marker:text-xl"
+    >
+      {
+        project.body
+          .split('\n')
+          .filter((line) => line != '')
+          .map((line) => <li>{line}</li>)
+      }
+    </ul>
+    <ul class="flex flex-row gap-4 text-sm">
+      {
+        project.data.tags.map((tag) => (
+          <li class="text-blue border-gray-light border rounded-md shadow p-2">
+            {tag}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</div>
