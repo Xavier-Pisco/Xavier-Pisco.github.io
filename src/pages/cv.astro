@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import Degree from '../components/Degree.astro';
+import Work from '../components/Work.astro';
+import Layout from '../layouts/Layout.astro';
+import { compareDates } from '../dates';
+
+const works = (await getCollection('works')).sort((work1, work2) =>
+  compareDates(work1.data.endDate, work2.data.endDate),
+);
+const education = (await getCollection('education')).sort((degree1, degree2) =>
+  compareDates(degree1.data.endDate, degree2.data.endDate),
+);
+---
+
+<Layout title="CV - Xavier Pisco">
+  <main
+    slot="main-content"
+    class="h-fit min-h-full flex flex-col gap-8 items-center"
+  >
+    <h1>CV</h1>
+    <ul class="w-full h-fit min-h-full flex flex-col gap-8">
+      <li class="w-full h-fit min-h-full flex flex-col gap-4">
+        <h2 class="border-b text-blue">Work Experience</h2>
+        <ul class="w-full h-fit min-h-full flex flex-col gap-4">
+          {
+            works.map((work) => (
+              <li class="w-full h-fit min-h-full">
+                <Work work={work} />
+              </li>
+            ))
+          }
+        </ul>
+      </li>
+      <li class="w-full h-fit min-h-full flex flex-col gap-4">
+        <h2 class="border-b text-blue">Education</h2>
+        <ul class="w-full h-fit min-h-full flex flex-col gap-4">
+          {
+            education.map((degree) => (
+              <li class="w-full h-fit min-h-full">
+                <Degree education={degree} />
+              </li>
+            ))
+          }
+        </ul>
+      </li>
+    </ul>
+  </main>
+</Layout>

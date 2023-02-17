@@ -1,0 +1,40 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Link from '../icons/link.astro';
+import InfoBox from './InfoBox.astro';
+interface Props {
+  work: CollectionEntry<'works'>;
+}
+const { work } = Astro.props;
+---
+
+<InfoBox>
+  <Fragment slot="title">
+    <a href={work.data.companyLink} class="text-blue text-2xl flex flex-row gap-2"
+      >{work.data.company}
+      <Link color="blue" width="4" />
+    </a>
+    <h3>{work.data.title}</h3>
+  </Fragment>
+  <Fragment slot="top-right">
+    <p class="text-blue">{work.data.location}</p>
+    <p>{work.data.startDate} - {work.data.endDate}</p>
+  </Fragment>
+  <Fragment slot="box-body-li">
+    {
+      work.body
+        .split('\n')
+        .filter((line) => line != '')
+        .map((line) => <li>{line}</li>)
+    }
+  </Fragment>
+  <Fragment slot="tags">
+    {
+      work.data.tags.map((tag) => (
+        <li class="text-blue border-gray-light border rounded-md shadow p-2">
+          {tag}
+        </li>
+      ))
+    }
+  </Fragment>
+</InfoBox>

@@ -2,10 +2,18 @@
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 import Project from '../components/Project.astro';
-const projects = await getCollection('projects');
+import { compareDates } from '../dates';
+
+const compareProjects = (project1: any, project2: any) => {
+  if (project1.data.priority < project2.data.priority) return 1;
+  if (project1.data.priority > project2.data.priority) return -1;
+  return compareDates(project1.data.endDate, project2.data.endDate);
+};
+
+const projects = (await getCollection('projects')).sort(compareProjects);
 ---
 
-<Layout title="Projects">
+<Layout title="Projects - Xavier Pisco">
   <main
     slot="main-content"
     class="h-fit min-h-full flex flex-col gap-8 items-center"

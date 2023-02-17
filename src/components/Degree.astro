@@ -1,0 +1,31 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Link from '../icons/link.astro';
+import InfoBox from './InfoBox.astro';
+interface Props {
+  education: CollectionEntry<'education'>;
+}
+const { education } = Astro.props;
+---
+
+<InfoBox>
+  <Fragment slot="title">
+    <a href={education.data.schoolLink} class="text-blue text-2xl flex flex-row gap-2">
+      {education.data.school} 
+      <Link color="blue" width="4"/>
+    </a>
+    <h3>{education.data.degree}</h3>
+  </Fragment>
+  <Fragment slot="top-right">
+    <p class="text-blue">{education.data.location}</p>
+    <p>{education.data.startDate} - {education.data.endDate}</p>
+  </Fragment>
+  <Fragment slot="box-body-li">
+    {
+      education.body
+        .split('\n')
+        .filter((line) => line != '')
+        .map((line) => <li>{line}</li>)
+    }
+  </Fragment>
+</InfoBox>

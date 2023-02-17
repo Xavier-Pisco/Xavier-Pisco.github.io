@@ -1,0 +1,24 @@
+---
+---
+
+<div class="flex flex-row shadow-lg w-full h-fit min-h-full">
+    <slot name="image"/>
+  <div class="flex flex-col gap-4 w-full p-4 h-fit min-h-full">
+    <div class="flex flex-row place-content-between w-full">
+      <div class="flex flex-col gap-2">
+        <slot name="title" />
+      </div>
+      <div class="flex flex-col gap-2 text-right text-gray">
+        <slot name="top-right" />
+      </div>
+    </div>
+    <ul
+      class="flex flex-col gap-8 p-4 list-disc marker:text-blue marker:text-xl"
+    >
+      <slot name="box-body-li" />
+    </ul>
+    <ul class="flex flex-row gap-4 text-sm">
+      <slot name="tags" />
+    </ul>
+  </div>
+</div>
