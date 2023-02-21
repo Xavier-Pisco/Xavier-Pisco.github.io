@@ -1,16 +1,16 @@
 ---
 import Logo from './Logo.astro';
 
-const classnames = 'text-blue text-2xl';
+const classNames = 'text-blue text-5xl lg:text-2xl';
 ---
 
 <div class="flex flex-row p-4">
-  <Logo />
+  <Logo classNames={classNames}/>
   <div class="grow"></div>
   <div class="flex flex-row gap-8">
-    <a href="/" class={classnames}> Home</a>
-    <a href="/projects" class={classnames}> Projects</a>
-    <a href="/cv" class={classnames}> CV</a>
-    <a href="/blog" class={classnames}> Blog</a>
+    <!-- <a href="/" class={classNames}> Home</a> -->
+    <a href="/projects" class={classNames}> Projects</a>
+    <a href="/cv" class={classNames}> CV</a>
+    <a href="/blog" class={classNames}> Blog</a>
   </div>
 </div>

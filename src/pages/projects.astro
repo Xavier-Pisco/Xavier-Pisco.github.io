@@ -16,10 +16,10 @@ const projects = (await getCollection('projects')).sort(compareProjects);
 <Layout title="Projects - Xavier Pisco">
   <main
     slot="main-content"
-    class="h-fit min-h-full flex flex-col gap-8 items-center"
+    class="h-fit min-h-full flex flex-col gap-16 lg:gap-8 items-center"
   >
-    <h1>Projects</h1>
-    <ul class="w-full h-fit min-h-full flex flex-col gap-8">
+    <h1 class="text-6xl lg:text-4xl">Projects</h1>
+    <ul class="w-full h-fit min-h-full flex flex-col gap-16 lg:gap-8">
       {
         projects.map((project) => (
           <li class="w-full h-fit min-h-full">
