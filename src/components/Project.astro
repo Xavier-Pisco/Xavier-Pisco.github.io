@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import Github from '../icons/github.astro';
+import Link from '../icons/link.astro';
 import InfoBox from './InfoBox.astro';
 interface Props {
   project: CollectionEntry<'projects'>;
@@ -20,11 +21,11 @@ const { project } = Astro.props;
         project.data.subtitle
       }
     </h2>
-    <div class="flex flex-row h-12 lg:h-8 gap-4">
+    <div class="flex flex-row h-12 lg:h-8 gap-12">
       {
         project.data.link && (
           <a href={project.data.link} target="_blank">
-            Try it!
+            <Link color="project" />
           </a>
         )
       }

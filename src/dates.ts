@@ -20,8 +20,8 @@ const compareDates = (date1: string, date2: string): number => {
     'Dec',
   ];
   return (
-    months.indexOf(date1.substring(0, 3)) -
-    months.indexOf(date2.substring(0, 3))
+    months.indexOf(date2.substring(0, 3)) -
+    months.indexOf(date1.substring(0, 3))
   );
 };
 
